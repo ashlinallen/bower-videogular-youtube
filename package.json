@@ -1,0 +1,55 @@
+{
+  "name": "videogular-youtube",
+  "version": "https://github.com/ashlinallen/bower-videogular-youtube/master/tarball/",
+  "description": "Videogular youtube plugin",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patlux/videogular-youtube.git"
+  },
+  "keywords": [
+    "videogular",
+    "videogular-youtube",
+    "videogular-plugin"
+  ],
+  "author": {
+    "name": "NamPNQ",
+    "email": "nampnq@gmail.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/patlux/videogular-youtube/issues"
+  },
+  "homepage": "http://nampnq.vietnamcode.info",
+  "gitHead": "c1beb409acd120a23ac6165266ade90327f5d853",
+  "_id": "videogular-youtube@2.0.5",
+  "_shasum": "71c2d6933cabb60cdc9646e785b57505297c8404",
+  "_from": "videogular-youtube@>=2.0.5 <3.0.0",
+  "_npmVersion": "3.9.5",
+  "_nodeVersion": "6.2.1",
+  "_npmUser": {
+    "name": "patlux",
+    "email": "dev@patwoz.de"
+  },
+  "dist": {
+    "shasum": "71c2d6933cabb60cdc9646e785b57505297c8404",
+    "tarball": "https://registry.npmjs.org/videogular-youtube/-/videogular-youtube-2.0.5.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "patlux",
+      "email": "dev@patwoz.de"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-16-east.internal.npmjs.com",
+    "tmp": "tmp/videogular-youtube-2.0.5.tgz_1466148949484_0.6606243595015258"
+  },
+  "_resolved": "https://registry.npmjs.org/videogular-youtube/-/videogular-youtube-2.0.5.tgz"
+}
