@@ -1,6 +1,6 @@
 {
   "name": "videogular-youtube",
-  "version": "https://github.com/ashlinallen/bower-videogular-youtube/master/tarball/",
+  "version": "2.0.5",
   "description": "Videogular youtube plugin",
   "main": "index.js",
   "directories": {
