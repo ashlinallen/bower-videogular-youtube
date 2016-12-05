@@ -75,14 +75,17 @@ angular.module("info.vietnamcode.nampnq.videogular.plugins.youtube", [])
                         function onVideoReady() {
                             //Define some property, method for player
                             API.mediaElement[0].__defineGetter__("currentTime", function () {
-                                return ytplayer.getCurrentTime();
+                                return Math.ceil(ytplayer.getCurrentTime());
                             });
                             API.mediaElement[0].__defineSetter__("currentTime", function (seconds) {
                                 return ytplayer.seekTo(seconds, true);
                             });
-                            API.mediaElement[0].__defineGetter__("duration", function () {
-                                return ytplayer.getDuration();
-                            });
+                            API.mediaElement[0].__defineGetter__("duration", (function () {
+                                var dur = ytplayer.getDuration();
+                                return function() {
+                                    return dur;
+                                };
+                            })());
                             API.mediaElement[0].__defineGetter__("paused", function () {
                                 return ytplayer.getPlayerState() != YT.PlayerState.PLAYING;
                             });
