@@ -50,28 +50,25 @@ angular.module("info.vietnamcode.nampnq.videogular.plugins.youtube", [])
                         function initYoutubePlayer(url) {
                             if (ytplayer) {
                                 destroyYoutubePlayer();
-                                ytplayer = new YT.Player(API.mediaElement[0], {
-                                    videoId: getYoutubeId(url),
-                                    playerVars: playerVars,
-                                    events: {
-                                        'onReady': onVideoReady,
-                                        'onStateChange': onVideoStateChange
-                                    }
-                                });
+                                ytplayer = createYoutubePlayer();
                             } else {
                                 $rootScope.$watch('youtubeApiReady', function(value) {
                                     if (value) {
-                                        ytplayer = new YT.Player(API.mediaElement[0], {
-                                            videoId: getYoutubeId(url),
-                                            playerVars: playerVars,
-                                            events: {
-                                                'onReady': onVideoReady,
-                                                'onStateChange': onVideoStateChange
-                                            }
-                                        });
+                                        ytplayer = createYoutubePlayer();
                                     }
                                 });
                             }
+                        }
+
+                        function createYoutubePlayer() {
+                            return new YT.Player(API.mediaElement[0], {
+                                        videoId: getYoutubeId(url),
+                                        playerVars: playerVars,
+                                        events: {
+                                            'onReady': onVideoReady,
+                                            'onStateChange': onVideoStateChange
+                                        }
+                                    });
                         }
 
                         function destroyYoutubePlayer() {
