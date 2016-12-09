@@ -49,9 +49,15 @@ angular.module("info.vietnamcode.nampnq.videogular.plugins.youtube", [])
 
                         function initYoutubePlayer(url) {
                             if (ytplayer) {
-                                ytplayer.cueVideoById({
-                                    videoId: getYoutubeId(url)
-                                  });
+                                destroyYoutubePlayer();
+                                ytplayer = new YT.Player(API.mediaElement[0], {
+                                    videoId: getYoutubeId(url),
+                                    playerVars: playerVars,
+                                    events: {
+                                        'onReady': onVideoReady,
+                                        'onStateChange': onVideoStateChange
+                                    }
+                                });
                             } else {
                                 $rootScope.$watch('youtubeApiReady', function(value) {
                                     if (value) {
