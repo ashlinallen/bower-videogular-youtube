@@ -50,17 +50,17 @@ angular.module("info.vietnamcode.nampnq.videogular.plugins.youtube", [])
                         function initYoutubePlayer(url) {
                             if (ytplayer) {
                                 destroyYoutubePlayer();
-                                ytplayer = createYoutubePlayer();
+                                ytplayer = createYoutubePlayer(url);
                             } else {
                                 $rootScope.$watch('youtubeApiReady', function(value) {
                                     if (value) {
-                                        ytplayer = createYoutubePlayer();
+                                        ytplayer = createYoutubePlayer(url);
                                     }
                                 });
                             }
                         }
 
-                        function createYoutubePlayer() {
+                        function createYoutubePlayer(url) {
                             return new YT.Player(API.mediaElement[0], {
                                         videoId: getYoutubeId(url),
                                         playerVars: playerVars,
