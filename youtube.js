@@ -144,8 +144,6 @@ angular.module("info.vietnamcode.nampnq.videogular.plugins.youtube", [])
                         }
 
                         function onVideoStateChange(event) {
-                            var player = event.target;
-
                             switch (event.data) {
                                 case YT.PlayerState.ENDED:
                                     stopUpdateTimer();
