@@ -110,6 +110,12 @@ angular.module("info.vietnamcode.nampnq.videogular.plugins.youtube", [])
                             API.mediaElement[0].__defineSetter__("playbackRate", function (rate) {
                                 return ytplayer.setPlaybackRate(rate);
                             });
+                            API.mediaElement[0].__defineSetter__("loadModule", function (mod) {
+                                return ytplayer.loadModule(mod);
+                            });
+                            API.mediaElement[0].__defineSetter__("unloadModule", function (mod) {
+                                return ytplayer.unloadModule(mod);
+                            });
                             API.mediaElement[0].play = function () {
                                 ytplayer.playVideo();
                             };
